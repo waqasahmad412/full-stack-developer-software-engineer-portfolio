@@ -1,0 +1,227 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --bg-primary: #030712;
+    --bg-secondary: #0b0f19;
+    --bg-card: rgba(15, 23, 42, 0.65);
+    --border-subtle: rgba(255, 255, 255, 0.08);
+    --border-hover: rgba(99, 102, 241, 0.3);
+    --text-primary: #f8fafc;
+    --text-secondary: #94a3b8;
+    --accent-glow: rgba(99, 102, 241, 0.15);
+  }
+
+  html.light {
+    --bg-primary: #f8fafc;
+    --bg-secondary: #f1f5f9;
+    --bg-card: rgba(255, 255, 255, 0.85);
+    --border-subtle: rgba(0, 0, 0, 0.08);
+    --border-hover: rgba(99, 102, 241, 0.4);
+    --text-primary: #0f172a;
+    --text-secondary: #475569;
+    --accent-glow: rgba(99, 102, 241, 0.08);
+  }
+
+  body {
+    font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+
+  h1, h2, h3, .font-display {
+    font-family: 'Syne', 'Plus Jakarta Sans', sans-serif;
+  }
+
+  code, pre, .font-mono {
+    font-family: 'JetBrains Mono', monospace;
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #030712;
+}
+html.light ::-webkit-scrollbar-track {
+  background: #f1f5f9;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(99, 102, 241, 0.3);
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(99, 102, 241, 0.6);
+}
+
+/* Glassmorphism helpers */
+.glass-panel {
+  background: var(--bg-card);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid var(--border-subtle);
+}
+
+.glass-panel-hover {
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.glass-panel-hover:hover {
+  border-color: var(--border-hover);
+  box-shadow: 0 12px 30px -10px var(--accent-glow);
+}
+
+/* Custom glow utility */
+.glow-accent {
+  box-shadow: 0 0 35px -5px rgba(99, 102, 241, 0.25);
+}
+
+.glow-cyan {
+  box-shadow: 0 0 35px -5px rgba(6, 182, 212, 0.25);
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+  *, ::before, ::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* ========================================================= */
+/* Comprehensive Print & PDF Document Styling                */
+/* ========================================================= */
+@media print {
+  @page {
+    size: A4 portrait;
+    margin: 12mm 15mm 12mm 15mm;
+  }
+
+  html, body {
+    background: #ffffff !important;
+    color: #0f172a !important;
+    font-size: 11pt !important;
+    line-height: 1.5 !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    width: 100% !important;
+  }
+
+  /* Hide all non-printable portfolio UI (Navbar, Hero, Presenter, Footer, Controls, Overlays) */
+  nav,
+  footer,
+  aside,
+  button,
+  .print-hide,
+  .pointer-events-none,
+  [aria-hidden="true"],
+  .fixed.inset-0.bg-slate-950\/85,
+  .fixed.bottom-20,
+  #hero,
+  #about,
+  #skills,
+  #projects,
+  #experience,
+  #services,
+  #process,
+  #profiles,
+  #contact {
+    display: none !important;
+  }
+
+  /* Expand modal container for complete multi-page document flow */
+  .fixed {
+    position: static !important;
+    overflow: visible !important;
+    height: auto !important;
+    max-height: none !important;
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+
+  /* Printable Resume Document Container */
+  #resume-printable-area {
+    display: block !important;
+    position: static !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 auto !important;
+    padding: 0 !important;
+    background: #ffffff !important;
+    color: #0f172a !important;
+    border: none !important;
+    box-shadow: none !important;
+    border-radius: 0 !important;
+    overflow: visible !important;
+  }
+
+  #resume-printable-area * {
+    color: #0f172a !important;
+    background-color: transparent !important;
+    box-shadow: none !important;
+    text-shadow: none !important;
+  }
+
+  #resume-printable-area h2 {
+    color: #090d16 !important;
+    font-size: 24pt !important;
+    margin-bottom: 2pt !important;
+  }
+
+  #resume-printable-area h3 {
+    color: #0369a1 !important; /* Professional deep cyan accent for headers */
+    font-size: 11pt !important;
+    font-weight: 700 !important;
+    border-bottom: 1.5pt solid #cbd5e1 !important;
+    padding-bottom: 3pt !important;
+    margin-top: 12pt !important;
+    margin-bottom: 6pt !important;
+    text-transform: uppercase !important;
+    letter-spacing: 0.05em !important;
+  }
+
+  #resume-printable-area h4 {
+    color: #0f172a !important;
+    font-size: 11pt !important;
+    font-weight: 600 !important;
+  }
+
+  #resume-printable-area p,
+  #resume-printable-area span,
+  #resume-printable-area div {
+    color: #334155 !important;
+  }
+
+  #resume-printable-area a {
+    color: #0369a1 !important;
+    text-decoration: none !important;
+  }
+
+  /* Avoid awkward page breaks in the middle of sections or projects */
+  .print-avoid-break {
+    page-break-inside: avoid !important;
+    break-inside: avoid !important;
+    margin-bottom: 8pt !important;
+  }
+
+  .print-border-box {
+    border: 1pt solid #e2e8f0 !important;
+    border-radius: 4pt !important;
+    padding: 6pt 8pt !important;
+    margin-bottom: 6pt !important;
+  }
+
+  .print-tag {
+    border: 0.5pt solid #cbd5e1 !important;
+    border-radius: 2pt !important;
+    padding: 1pt 4pt !important;
+    font-size: 8pt !important;
+    display: inline-block !important;
+    margin: 1pt 2pt 1pt 0 !important;
+    color: #475569 !important;
+  }
+}
