@@ -1,20 +1,130 @@
+# Waqas Ahmad — Full Stack Developer & Software Engineer
+
 <div align="center">
-<img width="1200" height="475" alt="GHBanner" src="https://ai.google.dev/static/site-assets/images/share-ais-513315318.png" />
+
+### Building Modern, Scalable & User-Focused Digital Experiences
+
+Full Stack Developer • Software Engineer • Web & App Developer
+
 </div>
 
-# Run and deploy your AI Studio app
+---
 
-This contains everything you need to run your app locally.
+## 👨‍💻 About Me
 
-View your app in AI Studio: https://ai.studio/apps/0b50f93d-8122-4d87-a765-35e9f25e9f83
+Hi, I'm **Waqas Ahmad**, a passionate Full Stack Developer and Software Engineer focused on building modern, responsive, and scalable web and application experiences.
 
-## Run Locally
+I enjoy turning ideas into real-world digital products with clean interfaces, reliable functionality, and maintainable code.
 
-**Prerequisites:**  Node.js
+My development interests include:
 
+- 🌐 Full Stack Web Development
+- 📱 Flutter & Mobile App Development
+- ⚡ Modern JavaScript & TypeScript Applications
+- 🐍 Python Development
+- 🤖 AI & Machine Learning
+- 🔐 Cybersecurity
+- 🗄️ Database & Backend Development
+- 🔌 REST APIs & Third-Party Integrations
 
-1. Install dependencies:
-   `npm install`
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
-3. Run the app:
-   `npm run dev`
+---
+
+## 🚀 Portfolio
+
+This repository contains my personal developer portfolio, showcasing my:
+
+- Professional profile
+- Technical skills
+- Development projects
+- Services
+- Experience and capabilities
+- Contact information
+
+The portfolio is designed with a modern, responsive interface to provide a professional overview of my development work.
+
+---
+
+## 🛠️ Technologies & Tools
+
+### Frontend
+
+- HTML5
+- CSS3
+- JavaScript
+- TypeScript
+- React
+- Next.js
+- Vite
+
+### Backend
+
+- Node.js
+- Express.js
+- PHP
+- Laravel
+- REST APIs
+
+### Mobile Development
+
+- Flutter
+- Dart
+
+### Programming
+
+- Python
+- JavaScript
+- TypeScript
+- Dart
+- PHP
+
+### Databases
+
+- SQL
+- Firebase
+- Supabase
+
+### Tools
+
+- Visual Studio Code
+- Git
+- GitHub
+- npm
+- Vite
+
+---
+
+## ✨ Features
+
+- 🎨 Modern and professional UI
+- 📱 Fully responsive design
+- ⚡ Fast and optimized performance
+- 🧩 Clean component-based architecture
+- 🌙 Modern visual experience
+- 📂 Project showcase
+- 💼 Professional skills section
+- 📞 Contact section
+- 🔗 Social and professional links
+
+---
+
+## 📂 Project Structure
+
+```text
+portfolio/
+│
+├── public/
+│   └── assets/
+│
+├── src/
+│   ├── components/
+│   ├── pages/
+│   ├── sections/
+│   └── ...
+│
+├── .env.example
+├── .gitignore
+├── index.html
+├── package.json
+├── tsconfig.json
+├── vite.config.ts
+└── README.md
